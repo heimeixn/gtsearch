@@ -1,0 +1,40 @@
+[{
+	"id":1,
+	"text":"我的源目录",
+	"children":[{
+		"id":11,
+		"text":"默认目录",
+		"state":"closed",
+		"children":[{
+			"id":111,
+			"text":"投资目录"
+		},{
+			"id":112,
+			"text":"潜在客户"
+		},{
+			"id":113,
+			"text":"已开发客户已开发客户"
+		}]
+	},{
+		"id":12,
+		"text":"融资项目",
+		"children":[{
+			"id":121,
+			"text":"正在进行中"
+		},{
+			"id":122,
+			"text":"已经关闭的",
+			"attributes":{
+				"p1":"Custom Attribute1",
+				"p2":"Custom Attribute2"
+			}
+		},{
+			"id":124,
+			"text":"待整理的",
+			"checked":true
+		}]
+	},{
+		"id":15,
+		"text":"独立目录"
+	}]
+}]

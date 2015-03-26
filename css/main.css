@@ -1,0 +1,70 @@
+*{margin:0px;padding:0px;}
+.cl:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.cl{}
+body{background: #292a33;}
+.wordkeep{  word-break: keep-all;white-space: nowrap;}
+.wordbreak{  word-break: break-all;word-wrap: break-word;}
+.btns{display: inline-block;border: 0 none; border-radius: 4px; text-align: center; cursor: pointer; outline: 0 none;}
+.btnOrange{ background: #f39700; color: #fff; height: 26px; line-height: 26px; padding: 0 18px; border: #f39700 solid 1px;}
+.btnOrange:hover{ background: #f39700; color: #fff;}
+.btnGray{ background: #ecf0f5; color: #9198ab; height: 26px; line-height: 26px; padding: 0 18px; border: #cfd8e6 solid 1px;}
+.btnGray:hover{ background: #ecf0f5; color: #9198ab;}
+.btnG{ color: #bbbdbd;  cursor: default;margin: 0 4px;}
+a.btnA,span.btnA{ color: #787979; margin: 0 4px;}
+a.btnA:hover,span.btnA:hover{ color: #f39700;}
+.btnText{ }
+.icons{display: inline-block;border: 0 none; background: url(../img/gtSearchBg.png) no-repeat;}
+.iconData{ background-position: 0px -33px;}
+.iconUser{ background-position: -42px -33px;}
+.iconPrivacy{ background-position: -94px -33px;}
+a.hover .iconData,a:hover .iconData,a.hover:hover .iconData{ background-position: 0px 0px;}
+a.hover .iconUser,a:hover .iconUser,a.hover:hover .iconUser{ background-position: -42px 0px;}
+a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background-position: -94px 0px;}
+
+.header{ height: 70px; padding:15px 15px 0; border-bottom: #18181e solid 1px;}
+.header .logo{background: url(../img/logo.png) no-repeat; width: 310px;height: 40px;display: inline-block; float:left; font-size: 30px;font-family: "微软雅黑"; color: #fff; padding-left: 60px;margin-top: 5px; padding-top:11px; line-height: 40px;}
+.header .navi{display: inline; width: 450px; height: 70px; float: left; list-style: none;}
+.header .navi li a{ display: inline-block; height: 70px; float: left; margin-right: 20px; width: 130px; text-align: center; color: #292a33;font-weight: bold; text-decoration: none; background: #d4d4d6;  border-top-left-radius:4px;border-top-right-radius:4px;}
+.header .navi li a:visited{ color: #292a33; text-decoration: none;}
+.header .navi li a.hover,.header .navi li a:hover{ color: #fff; background: #f39700;}
+.header .navi li a.hover:visited{ color: #fff; text-decoration: none;}
+.header .navi li a:hover,header .navi li a.hover:hover{ color: #fff; text-decoration: none;}
+.header .navi li a .icons{ margin:8px 46px 2px; width: 36px; height: 33px;}
+
+.main{ }
+.main .data-table{ width: 100%;}
+.main .data-table td{ }
+
+.menuTree{ width: 200px; background: #18181e; margin-left: 0px; margin-top: 0;display: inline-block; float: left;}
+.contData{ margin-top: 0; background: #fff; padding:20px 20px 1px; min-height: 650px; float: left;}
+
+.menuTree .tree-node{ padding:18px 0;}
+.menuTree .tree-title{ color: #9f9f9f; font-size: 14px;}
+.menuTree .tree-ident{ display: none;}
+.menuTree .tree-node-hover{ background: #3f4048; border-left: #f39700 solid 2px;}
+.menuTree .panel-body-noheader{ border:none;background: #18181e; color: #fff;}
+.menuTree .tree-expanded,.tree-collapsed{ background: url(../img/gtSearchBg.png) no-repeat -58px -90px;}
+.menuTree .tree-expanded .tree-expanded{ background: url(../img/gtSearchBg.png) no-repeat -15px -66px;}
+.menuTree .tree-folder{ display: none;}
+.menuTree .tree-file{ background: url(../img/gtSearchBg.png) no-repeat -32px -67px;}
+
+.contData .tabs-panels{border:none}
+.contData .dataForm{ background: #ecf0f5; padding:15px;}
+.contData .toolbar{ border: none; background: none; padding: 15px 0;}
+.toolbar .btnIcon{ border: #f39700; color: #f39700; font-size: 14px;}
+.toolbar .btnIcon i{ width: 16px; height: 14px;}
+.toolbar .btnAdd i{ background-position:-70px -66px ;}
+.toolbar .btnEdit i{ background-position:-92px -66px ;}
+.toolbar .btnDel i{ background-position:-118px -66px ;}
+.contData .dataView{ border: #e5e5e5 solid 1px; margin-top: 15px; font-size: 12px; color: #787979; }
+.contData .dataView th{border-right:#fff solid 1px; padding: 5px 5px; line-height: 30px; border-bottom: none; font-weight: normal;font-size: 13px; color: #fff; text-align: center; background: #9198ab;}
+.dataView tbody tr:nth-of-type(even){ background: #ecf0f5; border-bottom:#e6e6e6 solid 1px}
+.dataView tbody tr:hover{background:#fcead5 ; color: #787979;}
+.dataView td{ line-height: 18px; padding:9px 3px;   word-break: break-all;word-wrap: break-word;}
+.pageCount,.pageInfo{ font-size: 12px; color: #3a3b3b;}
+.pageCount{ line-height: 16px; padding: 10px 0; text-align: center;}
+.pageInfo{ line-height: 16px; padding: 10px 0;}
+.pageInfo .textbox{ border-radius:2px; border: #cfd8e6 solid 1px; margin-left: 10px;}
+.pageInfo .btnOrange{ padding:4px 10px; margin-left: 10px;}
+.pageInfo a{margin: 0 5px; color: #3a3b3b; text-decoration: none; font-size: 13px;}
+.pageInfo a:hover{color: #f39700;}

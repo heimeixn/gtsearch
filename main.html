@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>数据搜素--金桐网</title>
+		<link rel="SHORTCUT ICON" href="http://static.gintong.com/resources/images/v4/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="header cl">
+			<div class="logo">金桐网数据管理系统</div>
+			<ul class="navi">
+				<li><a href="" class="hover"><i class="icons iconData"></i>数据管理</a></li>
+				<li><a href=""><i class="icons iconUser"></i>用户管理</a></li>
+				<li><a href=""><i class="icons iconPrivacy"></i>权限管理</a></li>
+			</ul>
+		</div>
+		<div class="main cl">
+			<div class="menuTree">
+				<div class="easyui-panel">
+					<ul id="tt" class="easyui-tree" data-options="
+							url: 'data/tree_data.json',
+							method: 'get',
+							animate: true,
+							onClick: function(node){
+								$(this).tree('beginEdit',node.target);
+							},
+							onAfterEdit : function(node){
+								//此处保存分组
+								console.log(node.text);
+								
+							},
+							//onMouseleave：function(node){
+								//alert('----');
+							//},
+							onContextMenu: function(e,node){
+								e.preventDefault();
+								$(this).tree('select',node.target);
+								$('#mm').menu('show',{
+									left: e.pageX,
+									top: e.pageY
+								});
+							}
+						"></ul>
+				</div>
+				<div id="mm" class="easyui-menu" style="width:120px;">
+					<div onclick="menuTree.append()" data-options="iconCls:'icon-add'">Append</div>
+					<div onclick="menuTree.removeit()" data-options="iconCls:'icon-remove'">Remove</div>
+					<div class="menu-sep"></div>
+					<div onclick="menuTree.expand()">Expand</div>
+					<div onclick="menuTree.collapse()">Collapse</div>
+				</div>
+			</div>
+			
+			
+			<div class="contData">
+					<div class="contTab cl">
+						<span class="tabOption">线上数据</span><span class="tabOption hover">测试数据</span>
+					</div>
+					<div class="dataForm cl">
+						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select></span>
+						<span class="eleBorder" item="from"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
+						<span class="eleBorder" item="from"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
+						<br>
+						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+						<span class="eleBorder" item="detail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
+						<span class="eleBorder" item="detail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
+						<span class="eleBorder" item="detail"><input class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;"><div id="dd" class="easyui-calendar"></div></span>
+						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">展示模块选择</option><option value="1">人</option><option value="2">组织</option><option value="3">知识</option><option value="4">事件</option></select></span>
+						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">展示表选择</option><option value="1">新闻</option></select></span>
+						
+						<span class="eleBtns">
+							<span class="btns btnOrange">查询</span>
+							<span class="btns btnGray">重置</span>
+						</span>
+					</div>
+					<div class="toolbar cl">
+						<span class="btns btnIcon btnAdd"><i class="icons"></i>添加源</span>
+						<span class="btns btnIcon btnEdit"><i class="icons"></i>修改源</span>
+						<span class="btns btnIcon btnDel"><i class="icons"></i>删除源</span>
+					</div>
+					<div class="dataView cl">
+						<table cellpadding="0" cellspacing="0" border="0" width="100%">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>数据源名称</th>
+									<th>网站来源</th>
+									<th>数据源备注</th>
+									<th>信息总量(条)</th>
+									<th>当日新增信息量</th>
+									<th>所属目录</th>
+									<th>最后采集时间</th>
+									<th>服务状态</th>
+									<th>测试</th>
+									<th>上线</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>顺丰游戏</td>
+									<td>啊时代发生的发生地方</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>2013-09-12 12：00</td>
+									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnG">执行</a><a class="btns btnA">停止</a></span></td>
+									<td><span class="">上线</span></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>顺丰游戏</td>
+									<td>啊时代发生的发生地方</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>2013-09-12 12：00</td>
+									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnG">停止</a></span></td>
+									<td><span class="">上线</span></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>顺丰游戏</td>
+									<td>啊时代发生的发生地方</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>啊时代发生的风儿人特人</td>
+									<td>2013-09-12 12：00</td>
+									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnA">停止</a></span></td>
+									<td><span class="">上线</span></td>
+								</tr>
+							</tbody>
+						</table>
+				</div>
+				<div class="pageCount">
+					信息量合计：1231    当日新增合计：1212
+				</div>
+				<div class="pageInfo cl">
+					<table cellpadding="0" cellspacing="0" border="0" width="100%">
+						<tr>
+							<td width="20%" align="left"><span class="wordkeep">每页展示数量：<select class="easyui-combobox" name="pageEach"><option value="20">20</option><option value="20">50</option><option value="100">100</option></select></span></td>
+							<td width="60%" align="center"><a href="javascript:;">上一页</a><a href="javascript:;">下一页</a>  共1232条</td>
+							<td width="20%" align="right">当前第<span class="pageCurrent">1</span>页，共<span class="pageCurrent">1</span>页  <input class="easyui-textbox" style="width:40px;"><span class="btn btnOrange">调转</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		
+
+		</div>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			$('.contData').width($('body').width()-240);
+		});
+		$(function(){
+			$('.contData').width($('body').width()-240);
+		});
+		var menuTree = {
+			append : function(){
+				var t = $('#tt');
+				var node = t.tree('getSelected');
+				t.tree('append', {
+					parent: (node?node.target:null),
+					data: [{
+						text: 'new item1'
+					},{
+						text: 'new item2'
+					}]
+				});
+			},
+			removeit : function(){
+				var node = $('#tt').tree('getSelected');
+				$('#tt').tree('remove', node.target);
+			},
+			collapse : function(){
+				var node = $('#tt').tree('getSelected');
+				$('#tt').tree('collapse',node.target);
+			},
+			expand : function(){
+				var node = $('#tt').tree('getSelected');
+				$('#tt').tree('expand',node.target);
+			}
+		}
+		
+		var editIndex = undefined;
+		function endEditing(){
+			if (editIndex == undefined){return true}
+			if ($('#dg').datagrid('validateRow', editIndex)){
+				var ed = $('#dg').datagrid('getEditor', {index:editIndex,field:'productid'});
+				var productname = $(ed.target).combobox('getText');
+				$('#dg').datagrid('getRows')[editIndex]['productname'] = productname;
+				$('#dg').datagrid('endEdit', editIndex);
+				editIndex = undefined;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		function onClickRow(index){
+			if (editIndex != index){
+				if (endEditing()){
+					$('#dg').datagrid('selectRow', index)
+							.datagrid('beginEdit', index);
+					editIndex = index;
+				} else {
+					$('#dg').datagrid('selectRow', editIndex);
+				}
+			}
+		}
+		var dataGrid = {
+			append : function(){
+				if (endEditing()){
+					$('#dg').datagrid('appendRow',{status:'P'});
+					editIndex = $('#dg').datagrid('getRows').length-1;
+					$('#dg').datagrid('selectRow', editIndex)
+							.datagrid('beginEdit', editIndex);
+				}
+			},
+			removeit : function(){
+				if (editIndex == undefined){return}
+				$('#dg').datagrid('cancelEdit', editIndex)
+						.datagrid('deleteRow', editIndex);
+				editIndex = undefined;
+			},
+			accept : function(){
+				if (endEditing()){
+					$('#dg').datagrid('acceptChanges');
+				}
+			},
+			reject : function(){
+				$('#dg').datagrid('rejectChanges');
+				editIndex = undefined;
+			},
+			getChanges : function(){
+				var rows = $('#dg').datagrid('getChanges');
+				alert(rows.length+' rows are changed!');
+			}
+		}
+		
+	</script>
+	</body>
+</html>
