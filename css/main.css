@@ -1,7 +1,10 @@
 *{margin:0px;padding:0px;}
 .cl:after{content:".";display:block;clear:both;height:0;visibility:hidden}
 .cl{}
-body{background: #292a33;}
+.panel-header, .panel-body {border-color: #cfd8e6;}
+.combobox-item, .combobox-group {font-size: 12px; padding: 6px 3px;}
+
+body{background: #292a33; color: #292a33;}
 .wordkeep{  word-break: keep-all;white-space: nowrap;}
 .wordbreak{  word-break: break-all;word-wrap: break-word;}
 .btns{display: inline-block;border: 0 none; border-radius: 4px; text-align: center; cursor: pointer; outline: 0 none;}
@@ -17,6 +20,7 @@ a.btnA:hover,span.btnA:hover{ color: #f39700;}
 .iconData{ background-position: 0px -33px;}
 .iconUser{ background-position: -42px -33px;}
 .iconPrivacy{ background-position: -94px -33px;}
+.iconHelp{ background-position: -165px -67px;}
 a.hover .iconData,a:hover .iconData,a.hover:hover .iconData{ background-position: 0px 0px;}
 a.hover .iconUser,a:hover .iconUser,a.hover:hover .iconUser{ background-position: -42px 0px;}
 a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background-position: -94px 0px;}
@@ -38,24 +42,49 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .menuTree{ width: 200px; background: #18181e; margin-left: 0px; margin-top: 0;display: inline-block; float: left;}
 .contData{ margin-top: 0; background: #fff; padding:20px 20px 1px; min-height: 650px; float: left;}
 
-.menuTree .tree-node{ padding:18px 0;}
+.menuTree li{}
+.menuTree .tree-node{border-left: #18181e solid 2px;padding:17px 0; border-bottom: #18181e solid 1px;}
 .menuTree .tree-title{ color: #9f9f9f; font-size: 14px;}
-.menuTree .tree-ident{ display: none;}
-.menuTree .tree-node-hover{ background: #3f4048; border-left: #f39700 solid 2px;}
+.menuTree .tree-indent{ display: none;}
+.menuTree .tree-node-hover,.menuTree .tree-node-selected{ background: #3f4048; border-left: #f39700 solid 2px; border-bottom: #18181e solid 1px;}
 .menuTree .panel-body-noheader{ border:none;background: #18181e; color: #fff;}
 .menuTree .tree-expanded,.tree-collapsed{ background: url(../img/gtSearchBg.png) no-repeat -58px -90px;}
 .menuTree .tree-expanded .tree-expanded{ background: url(../img/gtSearchBg.png) no-repeat -15px -66px;}
 .menuTree .tree-folder{ display: none;}
-.menuTree .tree-file{ background: url(../img/gtSearchBg.png) no-repeat -32px -67px;}
+.menuTree .tree-hit,.menuTree .tree-icon{ margin-left: 12px;background: url(../img/gtSearchBg.png) no-repeat -32px -67px;}
+.menuTree .easyui-tree li div.tree-node span.tree-hit{background: url(../img/gtSearchBg.png) no-repeat -58px -90px;}
+.menuTree .easyui-tree li li div.tree-node span.tree-hit{background: url(../img/gtSearchBg.png) no-repeat -15px -66px; margin-left: 14px;}
+.menuTree .easyui-tree li li li div.tree-node span.tree-icon,.menuTree .easyui-tree li li li div.tree-node span.tree-hit{background: url(../img/gtSearchBg.png) no-repeat 1px -66px; margin-left: 28px;}
+.menuTree .easyui-tree li li li li div.tree-node span.tree-icon{background: url(../img/gtSearchBg.png) no-repeat -32px -67px; margin-left: 42px;}
 
+
+.contTab{ border-bottom:#292a33 solid 2px; height: 38px; overflow: visible;}
+.contTab .btnIcon{ float:right; margin-right: 10px; font-size: 12px; margin-top: 12px;}
+.contTab .btnIcon i{ float: left; height: 16px; width: 16px; margin-right: 5px;}
+.tabOpts{ float: left;}
+.tabOpt{ width: 88px; font-size: 14px; line-height: 38px; border-bottom: 2px solid #292a33; text-align: center; display: inline-block; cursor: pointer;}
+.tabOpt.hover{ border-bottom-color:#f39700 ; color: #f39700; }
 .contData .tabs-panels{border:none}
-.contData .dataForm{ background: #ecf0f5; padding:15px;}
-.contData .toolbar{ border: none; background: none; padding: 15px 0;}
-.toolbar .btnIcon{ border: #f39700; color: #f39700; font-size: 14px;}
-.toolbar .btnIcon i{ width: 16px; height: 14px;}
+.contData .dataForm{ background: #ecf0f5; padding:15px; margin-top: 15px;}
+.eleDetail{display: none;}
+.dataForm .combo{ border: #cfd8e6 solid 1px;  border-radius: 0; padding: 3px 0;}
+.dataForm .combo-arrow{ background: url(../img/gtSearchBg.png) -50px -66px; margin-top: 3px;}
+.dataForm .datebox .combo-arrow{ background: url(../img/gtSearchBg.png) -142px -65px;}
+.dataForm .eleBorder input{ height: 18px; padding: 4px 2px;}
+.dataForm .eleBorder>input{ height: 20px; width: 130px; padding: 3px 2px;}
+.dataForm .eleBorder .validatebox-text{ border: #cfd8e6 solid 1px;}
+.dataForm .combo .validatebox-text{ border: none;}
+.dataForm .eleRule{ font-size: 12px; line-height: 16px; margin-top: 10px; display: inline-block;}
+.dataForm .eleRule label{ margin-right: 15px; line-height: 16px; display: inline-block;} 
+.dataForm .eleRule input{ margin-right: 5px; vertical-align: middle;}
+
+.contData .toolbar{ border: none; background: none; padding: 15px 0 0;}
+.toolbar .btnIcon{ border: #f39700 solid 1px; color: #f39700; font-size: 14px; padding:4px 0px; width: 85px; border-radius: 0; text-align: left;}
+.toolbar .btnIcon i{ width: 16px; height: 16px; float: left; margin-left: 10px; margin-right: 4px;}
 .toolbar .btnAdd i{ background-position:-70px -66px ;}
-.toolbar .btnEdit i{ background-position:-92px -66px ;}
-.toolbar .btnDel i{ background-position:-118px -66px ;}
+.toolbar .btnEdit i{ background-position:-92px -67px ;}
+.toolbar .btnDel i{ background-position:-118px -67px ;}
+.toolbar span.btnDel{ color: #9198ab; border: #9198ab solid 1px;}
 .contData .dataView{ border: #e5e5e5 solid 1px; margin-top: 15px; font-size: 12px; color: #787979; }
 .contData .dataView th{border-right:#fff solid 1px; padding: 5px 5px; line-height: 30px; border-bottom: none; font-weight: normal;font-size: 13px; color: #fff; text-align: center; background: #9198ab;}
 .dataView tbody tr:nth-of-type(even){ background: #ecf0f5; border-bottom:#e6e6e6 solid 1px}
@@ -68,3 +97,4 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .pageInfo .btnOrange{ padding:4px 10px; margin-left: 10px;}
 .pageInfo a{margin: 0 5px; color: #3a3b3b; text-decoration: none; font-size: 13px;}
 .pageInfo a:hover{color: #f39700;}
+.pageInfo .textbox a{margin:0}

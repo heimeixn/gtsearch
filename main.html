@@ -59,104 +59,115 @@
 			
 			
 			<div class="contData">
-					<div class="contTab cl">
-						<span class="tabOption">线上数据</span><span class="tabOption hover">测试数据</span>
+				<div class="contTab cl">
+					<span class="btns btnIcon">帮助<i class="icons iconHelp"></i></span>
+					<span class="tabOpts"><span class="tabOpt hover" item="online">线上数据</span><span class="tabOpt" item="test">测试数据</span></span>
+				</div>
+				<div class="contTabView" item="online">
+						<div class="dataForm cl">
+							<div class="cl">
+								
+							<span class=""><select class="eleChoose" name="dataFrom"><option value="数据源查询" item="eleFrom">数据源查询</option><option value="数据明细查询" item="eleDetail">数据明细查询</option></select></span>
+							<span class="eleBorder eleFrom"><select class="easyui-combobox" name="dataStatus"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+							<span class="eleBorder eleFrom"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style="" name="name"></span>
+							<span class="eleBorder eleFrom"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style="" name="website"></span>
+							<span class="eleBorder eleFrom"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;" name="beginDate">—<input name="endDate" class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
+							<span class="eleBorder eleDetail"><select class="easyui-combobox" name="dataStatus"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+							<span class="eleBorder eleDetail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style="" name="name"></span>
+							<span class="eleBorder eleDetail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style="" name="website"></span>
+							<span class="eleBorder eleDetail"><input class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;" name="beginDate">—<input name="endDate" class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;"><div id="dd" class="easyui-calendar"></div></span>
+							<span class="eleBorder eleDetail"><select class="easyui-combobox" name="dataModule"><option value="0">展示模块选择</option><option value="1">人</option><option value="2">组织</option><option value="3">知识</option><option value="4">事件</option></select></span>
+							<span class="eleBorder eleDetail"><select class="easyui-combobox" name="dataTable"><option value="0">展示表选择</option><option value="1">新闻</option></select></span>
+							<span class="eleBtns">
+								<span class="btns btnOrange">查询</span>
+								<span class="btns btnGray">重置</span>
+							</span>
+							</div>
+							<span class="eleBorder eleRule">
+								字段规则：<label><input type="checkbox" name="allSetting"/>全部设置</label><label><input type="checkbox" name="newsTitle"/>新闻标题</label><label><input type="checkbox" name="newsContent"/>新闻内容</label><label><input type="checkbox" name="newsFrom"/>信息来源</label><label><input type="checkbox" name="newsTime"/>发布时间</label><label><input type="checkbox" name="newsBy"/>更新人员</label><label><input type="checkbox" name="newsContext"/>采集内容</label>
+							</span>
+						</div>
+						<div class="toolbar cl">
+							<span class="btns btnIcon btnAdd"><i class="icons"></i>添加源</span>
+							<span class="btns btnIcon btnEdit"><i class="icons"></i>修改源</span>
+							<span class="btns btnIcon btnDel"><i class="icons"></i>删除源</span>
+						</div>
+						<div class="dataView cl">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<thead>
+									<tr>
+										<th>序号</th>
+										<th>数据源名称</th>
+										<th>网站来源</th>
+										<th>数据源备注</th>
+										<th>信息总量(条)</th>
+										<th>当日新增信息量</th>
+										<th>所属目录</th>
+										<th>最后采集时间</th>
+										<th>服务状态</th>
+										<th>测试</th>
+										<th>上线</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>顺丰游戏</td>
+										<td>啊时代发生的发生地方</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>2013-09-12 12：00</td>
+										<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnG">执行</a><a class="btns btnA">停止</a></span></td>
+										<td><span class="">上线</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>顺丰游戏</td>
+										<td>啊时代发生的发生地方</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>2013-09-12 12：00</td>
+										<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnG">停止</a></span></td>
+										<td><span class="">上线</span></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>顺丰游戏</td>
+										<td>啊时代发生的发生地方</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>啊时代发生的风儿人特人</td>
+										<td>2013-09-12 12：00</td>
+										<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnA">停止</a></span></td>
+										<td><span class="">上线</span></td>
+									</tr>
+								</tbody>
+							</table>
 					</div>
-					<div class="dataForm cl">
-						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select></span>
-						<span class="eleBorder" item="from"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
-						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
-						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
-						<span class="eleBorder" item="from"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
-						<br>
-						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
-						<span class="eleBorder" item="detail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
-						<span class="eleBorder" item="detail"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
-						<span class="eleBorder" item="detail"><input class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#dd'" style="width:120px;"><div id="dd" class="easyui-calendar"></div></span>
-						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">展示模块选择</option><option value="1">人</option><option value="2">组织</option><option value="3">知识</option><option value="4">事件</option></select></span>
-						<span class="eleBorder" item="detail"><select class="easyui-combobox" name="dataFrom"><option value="0">展示表选择</option><option value="1">新闻</option></select></span>
-						
-						<span class="eleBtns">
-							<span class="btns btnOrange">查询</span>
-							<span class="btns btnGray">重置</span>
-						</span>
+					<div class="pageCount">
+						信息量合计：1231    当日新增合计：1212
 					</div>
-					<div class="toolbar cl">
-						<span class="btns btnIcon btnAdd"><i class="icons"></i>添加源</span>
-						<span class="btns btnIcon btnEdit"><i class="icons"></i>修改源</span>
-						<span class="btns btnIcon btnDel"><i class="icons"></i>删除源</span>
-					</div>
-					<div class="dataView cl">
+					<div class="pageInfo cl">
 						<table cellpadding="0" cellspacing="0" border="0" width="100%">
-							<thead>
-								<tr>
-									<th>序号</th>
-									<th>数据源名称</th>
-									<th>网站来源</th>
-									<th>数据源备注</th>
-									<th>信息总量(条)</th>
-									<th>当日新增信息量</th>
-									<th>所属目录</th>
-									<th>最后采集时间</th>
-									<th>服务状态</th>
-									<th>测试</th>
-									<th>上线</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>顺丰游戏</td>
-									<td>啊时代发生的发生地方</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>2013-09-12 12：00</td>
-									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnG">执行</a><a class="btns btnA">停止</a></span></td>
-									<td><span class="">上线</span></td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>顺丰游戏</td>
-									<td>啊时代发生的发生地方</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>2013-09-12 12：00</td>
-									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnG">停止</a></span></td>
-									<td><span class="">上线</span></td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>顺丰游戏</td>
-									<td>啊时代发生的发生地方</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>啊时代发生的风儿人特人</td>
-									<td>2013-09-12 12：00</td>
-									<td><span class="btnText"><a class="btns btnA">清除数据</a><a class="btns btnA">执行</a><a class="btns btnA">停止</a></span></td>
-									<td><span class="">上线</span></td>
-								</tr>
-							</tbody>
+							<tr>
+								<td width="20%" align="left"><span class="wordkeep">每页展示数量：<select class="easyui-combobox" name="pageEach"><option value="20">20</option><option value="20">50</option><option value="100">100</option></select></span></td>
+								<td width="60%" align="center"><a href="javascript:;">上一页</a><a href="javascript:;">下一页</a>  共1232条</td>
+								<td width="20%" align="right">当前第<span class="pageCurrent">1</span>页，共<span class="pageCurrent">1</span>页  <input class="easyui-textbox" style="width:40px;"><span class="btn btnOrange">调转</span></td>
+							</tr>
 						</table>
+					</div>
+					
 				</div>
-				<div class="pageCount">
-					信息量合计：1231    当日新增合计：1212
-				</div>
-				<div class="pageInfo cl">
-					<table cellpadding="0" cellspacing="0" border="0" width="100%">
-						<tr>
-							<td width="20%" align="left"><span class="wordkeep">每页展示数量：<select class="easyui-combobox" name="pageEach"><option value="20">20</option><option value="20">50</option><option value="100">100</option></select></span></td>
-							<td width="60%" align="center"><a href="javascript:;">上一页</a><a href="javascript:;">下一页</a>  共1232条</td>
-							<td width="20%" align="right">当前第<span class="pageCurrent">1</span>页，共<span class="pageCurrent">1</span>页  <input class="easyui-textbox" style="width:40px;"><span class="btn btnOrange">调转</span></td>
-						</tr>
-					</table>
+				<div class="contTabView" item="test" style="display:none;">
+					
 				</div>
 			</div>
 		
@@ -164,10 +175,22 @@
 		</div>
 	<script type="text/javascript">
 		$(window).resize(function(){
-			$('.contData').width($('body').width()-240);
+			var w = $('body').width()-240 < 740 ? 740 : $('body').width()-240;
+			$('.main,.header').width($('body').width() < 980 ? 980 : $('body').width());
+			$('.contData').width(w);
 		});
 		$(function(){
 			$('.contData').width($('body').width()-240);
+			$('.contTab .tabOpt').click(function(){
+				$('.contTabView[item='+$(this).attr('item')+']').show().siblings('.contTabView').hide();
+			});
+			$('select.eleChoose').combobox({onChange:function(newValue, oldValue){
+				var arr = [];
+				arr['数据源查询'] = 'eleFrom';
+				arr['数据明细查询'] = 'eleDetail';
+				$('.eleBorder.'+arr[oldValue]).hide();
+				$('.eleBorder.'+arr[newValue]).show();
+			}});
 		});
 		var menuTree = {
 			append : function(){
