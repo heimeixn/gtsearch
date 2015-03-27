@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>权限管理-金桐网数据管理系统</title>
+		<link rel="SHORTCUT ICON" href="http://static.gintong.com/resources/images/v4/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="header cl">
+			<div class="logo">金桐网数据管理系统</div>
+			<ul class="navi">
+				<li><a href=""><i class="icons iconData"></i>数据管理</a></li>
+				<li><a href=""><i class="icons iconUser"></i>用户管理</a></li>
+				<li><a href="" class="hover"><i class="icons iconPrivacy"></i>权限管理</a></li>
+			</ul>
+		</div>
+		<div class="main cl">
+			<div class="contData">
+				<div class="contTabView" item="online">
+						<div class="dataForm cl">
+							<div class="cl">
+							<span class="eleBorder"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="角色名称" style="" name="name"></span>
+							<span class="eleBorder"><input class="easyui-datebox" data-options="sharedCalendar:'#dd'"  data-options="prompt:'添加日期'" style="width:120px;" name="beginDate">—<input name="endDate" class="easyui-datebox"  data-options="prompt:'添加日期'" data-options="sharedCalendar:'#dd'" style="width:120px;"><div id="dd" class="easyui-calendar"></div></span>
+							<span class="eleBtns">
+								<span class="btns btnOrange">查询</span>
+								<span class="btns btnGray">重置</span>
+							</span>
+							</div>
+						</div>
+						<div class="toolbar cl">
+							<span class="btns btnIcon btnAdd"><i class="icons"></i>添加角色</span>
+							<span class="btns btnIcon btnEdit"><i class="icons"></i>修改角色</span>
+							<span class="btns btnIcon btnDel"><i class="icons"></i>删除角色</span>
+						</div>
+						<div class="dataView cl">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<thead>
+									<tr>
+										<th>序号</th>
+										<th>角色名称</th>
+										<th>添加时间</th>
+										<th>功能模块</th>
+										<th>关联账户</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>顺丰游戏</td>
+										<td>2013-09-12 12：00</td>
+										<td><a class="btnText privatePrompt">查看</a></td>
+										<td><a class="btnText">查看</a></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>顺丰游戏</td>
+										<td>2013-09-12 12：00</td>
+										<td><a class="btnText privatePrompt">查看</a></td>
+										<td><a class="btnText">查看</a></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>顺丰游戏</td>
+										<td>2013-09-12 12：00</td>
+										<td><a class="btnText privatePrompt">查看</a></td>
+										<td><a class="btnText">查看</a></td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<div class="pageCount">
+						信息量合计：1231    当日新增合计：1212
+					</div>
+					<div class="pageInfo cl">
+						<table cellpadding="0" cellspacing="0" border="0" width="100%">
+							<tr>
+								<td width="20%" align="left"><span class="wordkeep">每页展示数量：<select class="easyui-combobox" name="pageEach"><option value="20">20</option><option value="20">50</option><option value="100">100</option></select></span></td>
+								<td width="60%" align="center"><a href="javascript:;">上一页</a><a href="javascript:;">下一页</a>  共1232条</td>
+								<td width="20%" align="right">当前第<span class="pageCurrent">1</span>页，共<span class="pageCurrent">1</span>页  <input class="easyui-textbox" style="width:40px;"><span class="btn btnOrange">调转</span></td>
+							</tr>
+						</table>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+	<script type="text/javascript">
+		$(function(){
+			$('.privatePrompt').click(function(){
+				if($('#dlg').length == 0){
+					var d = $('#dlg').remove();
+					$('body').append('<div id="dlg" class="easyui-dialog" title="Basic Dialog" data-options="iconCls:\'icon-save\'" style="width:400px;height:200px;padding:10px"></div>')
+					//d=$('<div>',{'id':'dlg','class':'easy-ui-dialog','title':'普通用户','data-options':'iconCls:\'icon-save\'','style':'width:400px;height:200px;padding:10pxp;display:none'})
+					$('#dlg').dialog('open');
+				}
+			});
+		});
+		
+		
+	</script>
+	</body>
+</html>

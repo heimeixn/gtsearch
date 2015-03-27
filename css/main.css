@@ -1,6 +1,8 @@
 *{margin:0px;padding:0px;}
 .cl:after{content:".";display:block;clear:both;height:0;visibility:hidden}
 .cl{}
+.fl{float: left;}
+.fr{float: right;}
 .panel-header, .panel-body {border-color: #cfd8e6;}
 .combobox-item, .combobox-group {font-size: 12px; padding: 6px 3px;}
 
@@ -40,7 +42,7 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .main .data-table td{ }
 
 .menuTree{ width: 200px; background: #18181e; margin-left: 0px; margin-top: 0;display: inline-block; float: left;}
-.contData{ margin-top: 0; background: #fff; padding:20px 20px 1px; min-height: 650px; float: left;}
+.contData{ margin-top: 0; background: #fff; padding:20px 20px 1px; min-height: 650px;}
 
 .menuTree li{}
 .menuTree .tree-node{border-left: #18181e solid 2px;padding:17px 0; border-bottom: #18181e solid 1px;}
@@ -79,8 +81,8 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .dataForm .eleRule input{ margin-right: 5px; vertical-align: middle;}
 
 .contData .toolbar{ border: none; background: none; padding: 15px 0 0;}
-.toolbar .btnIcon{ border: #f39700 solid 1px; color: #f39700; font-size: 14px; padding:4px 0px; width: 85px; border-radius: 0; text-align: left;}
-.toolbar .btnIcon i{ width: 16px; height: 16px; float: left; margin-left: 10px; margin-right: 4px;}
+.toolbar .btnIcon{ border: #f39700 solid 1px; color: #f39700; font-size: 14px; padding:4px 15px 4px 10px; border-radius: 0; text-align: left;}
+.toolbar .btnIcon i{ width: 16px; height: 16px; float: left; margin-right: 4px;}
 .toolbar .btnAdd i{ background-position:-70px -66px ;}
 .toolbar .btnEdit i{ background-position:-92px -67px ;}
 .toolbar .btnDel i{ background-position:-118px -67px ;}
