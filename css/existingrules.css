@@ -1,0 +1,28 @@
+﻿.add_new{height:auto;margin-top:18px;background:#ecf0f5;}
+#title{height:18px;border-left:2px solid #f39700;font-size:18px;padding-left:10px;color:#f39700;margin-top:15px;}
+.add_left{height:auto;float:left;width:580px;position:relative;}
+.tankuang{z-index:3;height:200px;width:460px;position:absolute;left:150px;top:60px;border:1px solid #cfd8e6;border-radius:4px;background:#fff;}
+.tankuang span{display:block;margin-top:40px;text-align:center;font-size:14px;}
+.field_gz{padding-left:10px;margin-top:15px;}
+.field_gz h2{font-size:14px;font-weight:normal;float:left;border-left:2px solid #f39700;padding-left:5px;margin-top:10px;color:#f39700;}
+.field_gz b{margin-top:10px;float:right;display:block;height:15px;width:15px;background:url(../img/gtSearchBg.png) no-repeat -42px -92px;margin-right:10px;}
+.field_gz i{font-style:normal;font-size:12px;float:left;}
+.field_gz  input{display:block;float:left;}
+.chbox{}
+.all_check{margin-top:20px;}
+.chbox i{margin-right:10px;margin-top:10px;}
+.k_btn{list-style:none;margin-left:150px;margin-top:10px;}
+.k_btn li{padding:7px 20px;float:left;margin-left:20px;background:#f39700;color:#fff;}
+.add_left p{margin-top:15px;padding-left:140px;}
+.gzform{padding-top:25px;font-size:14px;}
+.gzform span{display:block;float:left;font-size:12px;}
+.gzform input{display:block;float:left;margin-left:20px;}
+#newname{height:45px;width:415px;border:1px solid #cfd8e6;}
+.sj{padding-left:140px;}
+.news{height:45px;width:415px;border:1px solid #cfd8e6;}
+.btn_operate{margin-lefT:130px;margin-top:15px;padding-bottom:80px;}
+.btn_operate li{float:left;padding:6px 10px;background:#f39700;margin-left:12px;list-style:none;color:#fff;}
+#cancel{background:#ecf0f5;border:1px solid #cfd8e6;color:#9198ab;}
+.add_right{float:left;;height:166px;border-left:1px solid #dbdbdb;overflow:hidden;margin-top:50px;margin-left:80px;width:270px;}
+.add_right p{margin-top:20px;font-size:12px;padding-left:20px;line-height:21px;color:#a3a3a6;}
+.add_right a{padding-left:20px;padding-top:12px;font-size:12px;}

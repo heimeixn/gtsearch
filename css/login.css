@@ -1,0 +1,25 @@
+*{margin:0;padding:0;}
+.cl:after{content:".";display:block;clear:both;height:0;visibility:hidden}
+.loginMain{width:1280px;height:800px;margin:0 auto;background:url(../img/bj.png) no-repeat top center;overflow:hidden;}
+.loginForm{height:368px;width:490px;background:rgba(255,255,255,0.3);border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:394px;margin-top:260px;}
+.login_logo{height:62px;width:490px;background:rgba(243,213,199,0.8);border-radius:10px 10px 0 0;}
+.login_logo img{margin-left:55px;margin-top:5px;float:left;}
+.login_logo p{font-size:30px;font-weight:bold;float:left;margin-left:18px;margin-top:15px;}
+#remind{height:24px;width:398px;border:1px solid red;margin-left:45px;margin-top:15px;}
+.remind_icon{height:16px;width:16px;display:block;float:left;background: url(../img/gtSearchBg.png) no-repeat;background-position: -144px -93px;margin-left:10px;margin-top:4px;}
+.remind_cont{line-height:24px;color:red;padding-left:10px;font-style:normal;font-size:12px;}
+#username_box{position:relative;height:41px;width:398px;border:1px solid #c7c3b3;margin-left:45px;margin-top:8px;background:#fff;}
+.usn_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;display:block;float:left;}
+.username_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;background: url(../img/gtSearchBg.png) no-repeat;background-position: -132px -36px;display:block;}
+.usernameho_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;background: url(../img/gtSearchBg.png) no-repeat;background-position: -132px -3px;display:block;}
+#username{float:left;border:none;width:398px;height:40px;text-indent:40px;}
+#password_box{position:relative;height:41px;width:398px;border:1px solid #c7c3b3;margin-left:45px;margin-top:25px;background:#fff;}
+.pw_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;display:block;float:left;}
+.password_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;background: url(../img/gtSearchBg.png) no-repeat;background-position: -161px -36px;display:block;float:left;}
+.passwordho_icon{position:absolute;height:25px;width:22px;margin-left:10px;margin-top:8px;background: url(../img/gtSearchBg.png) no-repeat;background-position: -161px -3px;display:block;float:left;}
+#password{float:left;border:none;width:398px;height:40px;text-indent:40px;}
+#remember_pw{width:400px;height:15px;margin-left:45px;margin-top:10px;}
+#check{margin-left:12px;float:left;}
+#remember_pw i{float:left;font-size:12px;padding-left:4px;font-style:normal;display:block;}
+#remember_pw b{float:right;font-size:12px;font-weight:normal;display:block;}
+.login_btn{height:45px;width:200px;background:url(../img/login_btn_03.png) no-repeat;margin-left:145px;margin-top:25px;}

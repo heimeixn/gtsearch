@@ -1,0 +1,31 @@
+﻿.main{width:100%;}
+ul,ol{list-style:none;}
+.main_r{width:1040px;height:auto;background:#fff;}
+.Conditions{float:left;margin-top:10px;}
+.dataForm{ padding:15px; margin-top: 15px;height:60px;background:#ecf0f5;}
+.eleBorder input{height:26px;width:128px;border:1px solid #cfd8e6;}
+.Conditions_btn{float:right;margin-top:10px;}
+.Query_btn{height:28px;width:62px;background:#ecf0f5;line-height:28px;color:#9198ab;text-align:center;border:1px solid #cfd8e6;display:block;float:left;margin-right:10px;}
+.Reset_btn{height:28px;width:62px;background:#ecf0f5;line-height:28px;color:#9198ab;text-align:center;border:1px solid #cfd8e6;display:block;float:left;margin-right:10px;}
+.Reset_btn:hover{background:#f39700;color:#fff;}
+.Query_btn:hover{background:#f39700;color:#fff;}
+.js_title{font-size:14px;color:#f39700;border-left:2px solid #f39700;padding-left:4px;margin-top:10px;}
+.js_table{margin-top: 15px; font-size: 12px; color: #787979;background:#ecf0f5;}
+#newname{height:36px;width:418px;border:1px solid #cfd8e6;margin-left:288px;margin-top:36px;text-indent:5px;}
+#remarks{height:88px;width:418px;max-width:418px;border:1px solid #cfd8e6;margin-left:288px;margin-top:15px;text-indent:5px;}
+.model{margin-left:288px;margin-top:15px;}
+.model_left{width:178px;height:210px;border:1px solid #cfd8e6;float:left;background:#fff;}
+.model_left h3{height:30px;line-height:30px;background:#9198ab;color:#fff;text-align:center;font-size:12px;font-weight:normal;}
+.model_btn{width:60px;height:210px;float:left;}
+.model_right{width:178px;height:210px;border:1px solid #cfd8e6;float:left;background:#fff;}
+.model_list{}
+.model_list li a{line-height:30px;padding-left:35px;background:url(../img/btn_10.png) no-repeat 15px center;}
+.model_list li ol li{line-height:30px;display:block;padding-left:45px;background:url(../img/btn_07.png) no-repeat 30px center;}
+#btnleft{height:25px;width:25px;background:url(../img/btnicon_03.png) no-repeat;border:none;margin-left:18px;margin-top:60px;}
+#btnright{height:25px;width:25px;background:url(../img/btnicon_06.png) no-repeat;border:none;margin-left:18px;margin-top:18px;}
+.model_right h3{height:30px;line-height:30px;background:#9198ab;color:#fff;text-align:center;font-size:12px;font-weight:normal;}
+.model_listtwo li a{line-height:30px;padding-left:35px;background:url(../img/btn_10.png) no-repeat 15px center;}
+.model_listtwo li ol li{line-height:30px;display:block;padding-left:45px;background:url(../img/btn_07.png) no-repeat 30px center;}
+.btnmodel{margin-left:380px;margin-top:30px;margin-bottom:36px;}
+#addbtn{height:35px;width:108px;border:1px solid #df8c03;background:#f39700;margin-right:20px;color:#fff;font-size:14px;}
+#cancelbtn{height:35px;width:108px;border:1px solid #cfd8e6;color:#9198ab;font-size:14px;}

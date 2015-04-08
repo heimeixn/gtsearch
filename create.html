@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>创建新规则--金桐网</title>
+		<link rel="SHORTCUT ICON" href="http://static.gintong.com/resources/images/v4/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/create.css">
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="header cl">
+			<div class="logo">金桐网数据管理系统</div>
+			<ul class="navi">
+				<li><a href="" class="hover"><i class="icons iconData"></i>数据管理</a></li>
+				<li><a href=""><i class="icons iconUser"></i>用户管理</a></li>
+				<li><a href=""><i class="icons iconPrivacy"></i>权限管理</a></li>
+			</ul>
+		</div>
+		<div class="contData">
+			<div class="contTab cl">
+				<span class="btns btnIcon">帮助<i class="icons iconHelp"></i></span>
+				<span class="tabOpts"><span class="tabOpt hover">线上数据</span><span class="tabOpt">测试数据</span></span>
+			</div>
+			<div class="dataForm cl">
+				<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select></span>
+				<span class="eleBorder" item="from"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态查询</option><option value="1">正常</option><option value="2">异常</option></select></span>
+				<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
+				<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站来源" style=""></span>
+				<span class="eleBorder" item="from"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
+				<span class="eleBtns">
+					<span class="btns btnOrange">查询</span>
+					<span class="btns btnGray">重置</span>
+				</span>
+			</div>
+			<h1 id="title">添加明细规则</h1>
+			<div class="add_new cl dataForm">
+				<div class="add_left">
+					<p class="gzform cl">
+						<input type="radio" name="gz" checked="true" style="margin-left:0px;"/><span>创建新规则</span>
+						<input type="radio" name="gz"/><span>使用已有规则</span>
+					</p>
+					<p><input type="text" placeholder="输入新规则名称" id="newname"/></p>
+					<p>
+						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select><span>
+						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select><span>
+					</p>
+					<div class="field_gz cl">
+						<div class="cl"><h2>字段规则：</h2><i><input type="checkbox" name="all"/>全部设置</i></div>
+						<div class="chbox">
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							<i><input type="checkbox" name="all"/>全部设置</i>
+							
+						</div>
+					</div>
+					<div class="news_title">
+						<h2>新闻标题：</h2><input class="news" type="text" placeholder="输入要抓取的新闻标题" id="news"/>
+					</div>
+					<div class="news_cont">
+						<h2>新闻内容：</h2><input class="news" type="text" placeholder="输入要抓取的新闻内容" id="cont"/>
+					</div>
+					<div class="news_address">
+						<h2>信息来源：</h2><input class="news" type="text" placeholder="输入要抓取的信息来源" id="address"/>
+					</div>
+					<div class="news_time">
+						<h2>发布时间：</h2><input class="news" type="text" placeholder="输入要抓取的时间内容" id="time"/>
+					</div>
+					<div class="news_people">
+						<h2>更新人员：</h2><input class="news" type="text" placeholder="内容必须唯一" id="people"/>
+					</div>
+					<div class="collect_title">
+						<h2>采集时间：</h2><input class="news" type="text" placeholder="内容必须唯一" id="collecttime"/>
+					</div>
+					<ul class="btn_operate">
+						<li>上一步</li>
+						<li>保存</li>
+						<li>保存继续下一步</li>
+						<li id="cancel">取消</li>
+					</ul>
+				</div>
+				<div class="add_right">
+					<p>提示：</br>
+					如若我们提供的抓取内容，无法满足您的抓取需求， 请通过邮件联系我们，我们会及时处理。
+					</p>
+					<a href="#">点击发送邮件</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

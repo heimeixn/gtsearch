@@ -1,0 +1,30 @@
+﻿.add_new{height:auto;margin-top:18px;background:#ecf0f5;}
+#title{height:18px;border-left:2px solid #f39700;font-size:18px;padding-left:10px;color:#f39700;margin-top:15px;}
+.add_left{height:auto;float:left;width:580px;position:relative;}
+.tankuang{height:140px;width:380px;position:absolute;left:150px;top:60px;border:1px solid #cfd8e6;border-radius:4px;background:#fff;}
+.tankuang i{float:right;display:block;height:15px;width:15px;background:url(../img/gtSearchBg.png) no-repeat -42px -92px;margin-right:10px;margin-top:10px;}
+.tankuang span{display:block;margin-top:40px;text-align:center;font-size:14px;}
+.k_btn{list-style:none;margin-left:100px;margin-top:10px;}
+.k_btn li{padding:7px 20px;float:left;margin-left:20px;background:#f39700;color:#fff;}
+.add_left p{margin-top:15px;padding-left:140px;}
+#newname{height:45px;width:415px;border:1px solid #cfd8e6;}
+.sj{padding-left:140px;}
+.field_gz{padding-left:80px;margin-top:15px;}
+.field_gz h2{font-size:12px;font-weight:normal;float:left;}
+.field_gz i{font-style:normal;font-size:12px;float:left;}
+.field_gz  input{display:block;float:left;}
+.chbox{margin-left:60px;}
+.chbox i{margin-right:10px;margin-top:10px;}
+.txtbox{margin-left:140px;margin-top:20px;}
+.txtbox i{display:block;height:14px;width:15px;background:url(../img/gtSearchBg.png) no-repeat -167px -94px;float:left;margin-right:4px;}
+.txtbox h2{width:200px;font-size:12px;color:#f39700;font-weight:normal;height:15px;float:left;}
+.txtcont{}
+.txtcont textarea{margin-top:10px;height:90px;max-width:415px;width:415px;border:1px solid #cfd8e6;float:left;}
+.txtcont b{display:block;height:18px;width:18px;float:left;background:url(../img/gtSearchBg.png) no-repeat -1px -92px;margin-top:10px;margin-left:4px;}
+.btn_operate{margin-left:90px;margin-top:15px;padding-bottom:80px;}
+.btn_operate li{float:left;padding:6px 10px;background:#f39700;margin-left:12px;list-style:none;color:#fff;}
+#Skip{background:#ecf0f5;border:1px solid #cfd8e6;color:#9198ab;}
+#cancel{background:#ecf0f5;border:1px solid #cfd8e6;color:#9198ab;}
+.add_right{float:left;;height:auto;border-left:1px solid #dbdbdb;overflow:hidden;margin-left:80px;width:270px;}
+.add_right p{margin-top:210px;font-size:12px;padding-left:20px;line-height:21px;color:#a3a3a6;}
+.add_right a{padding-left:20px;padding-top:12px;font-size:12px;}

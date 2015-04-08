@@ -67,7 +67,7 @@
 						<div class="dataForm cl">
 							<div class="cl">
 								
-							<span class=""><select class="eleChoose" name="dataFrom"><option value="数据源查询" item="eleFrom">数据源查询</option><option value="数据明细查询" item="eleDetail">数据明细查询</option></select></span>
+							<span class="eleBorder"><select class="eleChoose" name="dataFrom"><option value="数据源查询" item="eleFrom">数据源查询</option><option value="数据明细查询" item="eleDetail">数据明细查询</option></select></span>
 							<span class="eleBorder eleFrom"><select class="easyui-combobox" name="dataStatus"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
 							<span class="eleBorder eleFrom"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style="" name="name"></span>
 							<span class="eleBorder eleFrom"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style="" name="website"></span>
@@ -196,18 +196,17 @@
 			append : function(){
 				var t = $('#tt');
 				var node = t.tree('getSelected');
-				t.tree('append', {
+				t.tree('append', { 
 					parent: (node?node.target:null),
 					data: [{
 						text: 'new item1'
-					},{
-						text: 'new item2'
 					}]
 				});
 			},
 			removeit : function(){
 				var node = $('#tt').tree('getSelected');
 				$('#tt').tree('remove', node.target);
+				
 			},
 			collapse : function(){
 				var node = $('#tt').tree('getSelected');

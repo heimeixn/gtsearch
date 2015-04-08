@@ -67,11 +67,12 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .tabOpt{ width: 88px; font-size: 14px; line-height: 38px; border-bottom: 2px solid #292a33; text-align: center; display: inline-block; cursor: pointer;}
 .tabOpt.hover{ border-bottom-color:#f39700 ; color: #f39700; }
 .contData .tabs-panels{border:none}
-.contData .dataForm{ background: #ecf0f5; padding:15px; margin-top: 15px;}
+.contData .dataForm{ background: #ecf0f5; padding:10px 15px 15px 15px; margin-top: 15px;}
 .eleDetail{display: none;}
 .dataForm .combo{ border: #cfd8e6 solid 1px;  border-radius: 0; padding: 3px 0;}
 .dataForm .combo-arrow{ background: url(../img/gtSearchBg.png) -50px -66px; margin-top: 3px;}
 .dataForm .datebox .combo-arrow{ background: url(../img/gtSearchBg.png) -142px -65px;}
+.dataForm .eleBorder{ margin-top: 5px;}
 .dataForm .eleBorder input{ height: 18px; padding: 4px 2px;}
 .dataForm .eleBorder>input{ height: 20px; width: 130px; padding: 3px 2px;}
 .dataForm .eleBorder .validatebox-text{ border: #cfd8e6 solid 1px;}
@@ -89,6 +90,7 @@ a.hover .iconPrivacy,a:hover .iconPrivacy,a.hover:hover .iconPrivacy{ background
 .toolbar span.btnDel{ color: #9198ab; border: #9198ab solid 1px;}
 .contData .dataView{ border: #e5e5e5 solid 1px; margin-top: 15px; font-size: 12px; color: #787979; }
 .contData .dataView th{border-right:#fff solid 1px; padding: 5px 5px; line-height: 30px; border-bottom: none; font-weight: normal;font-size: 13px; color: #fff; text-align: center; background: #9198ab;}
+.dataView th{ word-break: keep-all;white-space: nowrap;}
 .dataView tbody tr:nth-of-type(even){ background: #ecf0f5; border-bottom:#e6e6e6 solid 1px}
 .dataView tbody tr:hover{background:#fcead5 ; color: #787979;}
 .dataView td{ line-height: 18px; padding:9px 3px;   word-break: break-all;word-wrap: break-word;}

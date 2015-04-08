@@ -1,0 +1,21 @@
+﻿.main{width:100%;}
+.main_r{width:1040px;height:auto;background:#fff;}
+.Conditions{float:left;margin-top:10px;}
+.dataForm{ padding:15px; margin-top: 15px;height:60px;background:#ecf0f5;}
+.eleBorder input{height:26px;width:128px;border:1px solid #cfd8e6;}
+.Conditions_btn{float:right;margin-top:10px;}
+.Query_btn{height:28px;width:62px;background:#ecf0f5;line-height:28px;color:#9198ab;text-align:center;border:1px solid #cfd8e6;display:block;float:left;margin-right:10px;}
+.Reset_btn{height:28px;width:62px;background:#ecf0f5;line-height:28px;color:#9198ab;text-align:center;border:1px solid #cfd8e6;display:block;float:left;margin-right:10px;}
+.Reset_btn:hover{background:#f39700;color:#fff;}
+.Query_btn:hover{background:#f39700;color:#fff;}
+.toolbar .btnIcon{ border: #f39700 solid 1px; color: #f39700; font-size: 14px; padding:4px 0px; width:95px; border-radius: 0; text-align: left;  margin-top: 12px;}
+.toolbar .btnIcon i{ width: 16px; height: 16px; float: left; margin-left: 10px; margin-right: 4px;}
+.toolbar .btnAdd i{ background-position:-70px -66px ;}
+.toolbar .btnEdit i{ background-position:-92px -67px ;}
+.toolbar .btnDel i{ background-position:-118px -67px ;}
+.toolbar span.btnDel{ color: #9198ab; border: #9198ab solid 1px;}
+.js_table{ border: #e5e5e5 solid 1px; margin-top: 15px; font-size: 12px; color: #787979; }
+.js_table th{border-right:#fff solid 1px; padding: 5px 5px; line-height: 30px; border-bottom: none; font-weight: normal;font-size: 13px; color: #fff; text-align: center; background: #9198ab;}
+.js_table tbody tr:nth-of-type(even){ background: #ecf0f5; border-bottom:#e6e6e6 solid 1px}
+.js_table tbody tr:hover{background:#fcead5 ; color: #787979;}
+.js_table td{ line-height: 18px; padding:9px 3px;   word-break: break-all;word-wrap: break-word;}
