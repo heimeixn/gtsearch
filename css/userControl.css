@@ -1,0 +1,41 @@
+.dataView td{
+	text-align: center;
+}
+.addSourceTitle {
+	margin: 15px 0;
+	background: #fff;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.addSourceTitle span{
+	display: inline-block;
+	margin-right: 20px;
+	width: 93px;
+	height: 28px;
+	font-size: 14px;
+	line-height: 28px;
+}
+.addUser,.editUser{
+	border: #f39700 1px solid;
+	color: #f39700;
+	
+}
+.addUser b{
+	background-position: -73px -68px;
+}
+.editUser b{
+	background-position: -94px -68px;
+}
+.delUser b{
+	background-position: -120px -68px;
+}
+.delUser{
+	border:1px solid #cfd8e6;
+	color:#9198ab;
+}
+.addSourceTitle b{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../img/gtSearchBg.png) no-repeat;
+}

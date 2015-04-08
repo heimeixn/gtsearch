@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>添加源</title>
+		<link rel="SHORTCUT ICON" href="http://static.gintong.com/resources/images/v4/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/userControl.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header cl">
+				<div class="logo">金桐网数据管理系统</div>
+				<ul class="navi">
+					<li><a href="" class="hover"><i class="icons iconData"></i>数据管理</a></li>
+					<li><a href=""><i class="icons iconUser"></i>用户管理</a></li>
+					<li><a href=""><i class="icons iconPrivacy"></i>权限管理</a></li>
+				</ul>
+			</div>
+
+			<div class="main cl">
+				<div class="contData">
+					<div class="dataForm cl">
+						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select></span>
+						<span class="eleBorder" item="from"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
+						<span class="eleBorder" item="from"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
+						
+						
+						<span class="eleBtns">
+							<span class="btns btnOrange">查询</span>
+							<span class="btns btnGray">重置</span>
+						</span>
+					</div>
+					<h3 class="addSourceTitle"><span class="addUser"><b></b>添加用户</span><span class="editUser"><b></b>修改用户</span><span class="delUser"><b></b>删除用户</span></h3>
+					<div class="addContent">
+						<div class="dataView cl">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<thead>
+									<tr>
+										<th>序号</th>
+										<th>用户名</th>
+										<th>用户手机</th>
+										<th>用户邮箱</th>
+										<th>用户角色</th>
+										<th>账户状态</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>张斌</td>
+										<td>13111111111，13111111111</td>
+										<td>张斌@gintong.com,13222454Qqq.com</td>
+										<td>超级管理员</td>
+										<td>解锁</td>
+										<td>重置密码</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>张斌</td>
+										<td>13111111111，13111111111</td>
+										<td>张斌@gintong.com,13222454Qqq.com</td>
+										<td>超级管理员</td>
+										<td>解锁</td>
+										<td>重置密码</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>张斌</td>
+										<td>13111111111，13111111111</td>
+										<td>张斌@gintong.com,13222454Qqq.com</td>
+										<td>超级管理员</td>
+										<td>解锁</td>
+										<td>重置密码</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>张斌</td>
+										<td>13111111111，13111111111</td>
+										<td>张斌@gintong.com,13222454Qqq.com</td>
+										<td>超级管理员</td>
+										<td>解锁</td>
+										<td>重置密码</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>张斌</td>
+										<td>13111111111，13111111111</td>
+										<td>张斌@gintong.com,13222454Qqq.com</td>
+										<td>超级管理员</td>
+										<td>解锁</td>
+										<td>重置密码</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pageCount">
+							信息量合计：1231    当日新增合计：1212
+						</div>
+						<div class="pageInfo cl">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td width="20%" align="left"><span class="wordkeep">每页展示数量：<select class="easyui-combobox" name="pageEach"><option value="20">20</option><option value="20">50</option><option value="100">100</option></select></span></td>
+									<td width="60%" align="center"><a href="javascript:;">上一页</a><a href="javascript:;">下一页</a>  共1232条</td>
+									<td width="20%" align="right">当前第<span class="pageCurrent">1</span>页，共<span class="pageCurrent">1</span>页  <input class="easyui-textbox" style="width:40px;"><span class="btn btnOrange">调转</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+		<script>
+		$(function(){
+			var thisVal,thisText;
+			$(document).on('focus',".source input,.inputArea",function(){
+				thisVal=$(this).val();
+				thisText=$(this).text();
+				if(thisVal == this.defaultValue)
+				$(this).val("").text("")
+			}).on('blur',".source input,.inputArea",function(){
+				var a=$(this);
+				if(a.val()==''&&a.text()=='')
+				a.val(thisVal);
+				a.text(thisText);
+			})
+			$(document).on("click",".addCustomKey",function(){
+				addTextBox(this);
+			});
+			$(document).on("click",".delCustomKey",function(){
+				removeTextBox(this);
+			});	
+			$('.source').form({
+				url:'http://www.gintong.com',
+				onSubmit:function(){
+					return $(this).form('validate');
+				},
+				success:function(data){
+					$.messager.alert('Info', data, 'info');
+				}
+			});   
+		})
+		 
+
+
+
+		</script>
+	</body>
+</html>
