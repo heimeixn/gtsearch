@@ -50,7 +50,7 @@
 										<input required="true" missingMessage="名称必须填写" value="自定义数据源名称" class="easyui-validatebox inputText" validType="username" type="text" />
 									</li>
 									<li>
-										<input required="true" value="网站来源"  validType="isNull" missingMessage="网站来源必须填写" class="easyui-validatebox inputText" type="text" />
+										<input required="true" value="网站来源" validType="isNull" missingMessage="网站来源必须填写" class="easyui-validatebox inputText" type="text" />
 									</li>
 									<li class="dsnUrls">
 										<div><input required="true" value="数据源url" missingMessage="数据源url必须填写" name="dsnUrl[0]" class="easyui-validatebox inputText" validType="url" type="text" />
@@ -121,7 +121,8 @@
 	    	var self=$(e);
 	    	var items=$('.dsnUrls').length;
 			var textConcats='<li class="dsnUrls">'
-				+'<div><input value="数据源url" required="true" name="dsnUrl['+items+']" class="inputText" type="text" />'
+				+'<div><input value="数据源url" required="true" name="dsnUrl['+items+']" '
+				+'missingMessage="数据源url必须填写" class="easyui-validatebox inputText" validType="url" type="text" />'
 				+'<span lineTag="addContactWay">'
 				+	'<span class="delCustomKey" style="display:none;"></span>'
 				+	'<span class="addCustomKey" style="display: inline-block;"></span>'
