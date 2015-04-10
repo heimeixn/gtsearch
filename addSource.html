@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>添加源</title>
+		<link rel="SHORTCUT ICON" href="http://static.gintong.com/resources/images/v4/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="js/easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/addSource.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header cl">
+				<div class="logo">金桐网数据管理系统</div>
+				<ul class="navi">
+					<li><a href="" class="hover"><i class="icons iconData"></i>数据管理</a></li>
+					<li><a href=""><i class="icons iconUser"></i>用户管理</a></li>
+					<li><a href=""><i class="icons iconPrivacy"></i>权限管理</a></li>
+				</ul>
+			</div>
+
+			<div class="main cl">
+				<div class="contData">
+					<div class="contTab cl">
+						<span class="tabOption hover">线上数据</span><span class="tabOption">测试数据</span><span class="help">帮助</span>
+					</div>
+					<div class="dataForm cl">
+						<span class="eleBorder"><select class="easyui-combobox" name="dataFrom"><option value="1">数据源查询</option><option value="2">数据明细查询</option></select></span>
+						<span class="eleBorder" item="from"><select class="easyui-combobox" name="dataFrom"><option value="0">数据状态选择</option><option value="1">正常</option><option value="2">异常</option></select></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="数据源名称" style=""></span>
+						<span class="eleBorder" item="from"><input type="text" class="textbox-text validatebox-text textbox-prompt" autocomplete="off" placeholder="网站名称" style=""></span>
+						<span class="eleBorder" item="from"><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"> — <input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:120px;"><div id="cc" class="easyui-calendar"></div></span>
+						
+						
+						<span class="eleBtns">
+							<span class="btns btnOrange">查询</span>
+							<span class="btns btnGray">重置</span>
+						</span>
+					</div>
+					<h3 class="addSourceTitle">添加数据源</h3>
+					<div class="addContent">
+						<div class="contentLeft">
+							<form class="source" id="source">
+								<ul class="">
+									<li>
+										<input required="true" name="sourceName" missingMessage="名称必须填写" value="自定义数据源名称" class="easyui-validatebox inputText" validType="username" type="text" />
+									</li>
+									<li>
+										<input name="from" required="true" value="网站来源" validType="isNull" missingMessage="网站来源必须填写" class="easyui-validatebox inputText" type="text" />
+									</li>
+									<li class="dsnUrls">
+										<div><input name="url" required="true" value="数据源url" missingMessage="数据源url必须填写" name="dsnUrl[0]" class="easyui-validatebox inputText" validType="url" type="text" />
+										<span lineTag="addContactWay">
+											<span class="delCustomKey" style="display:none;"></span>
+											<span class="addCustomKey" style="display: inline-block;"></span>
+										</span>
+										</div>
+										<span class="ifPageUp">是否配置翻页:<input name="paging[0]" type="radio" />是<input type="radio" name="paging[0]" />否</span>
+									</li>
+									<li>
+										<textarea  required="true" name="remark" validType="isNull"  missingMessage="备注必须填写" class="easyui-validatebox inputArea">数据源备注</textarea> 
+									</li>
+									<li>
+										<input class="save" value="保存" type="submit" /><span class="cancel">取消</span>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div class="contentRight">
+							<p>
+								提示：<br/>
+								1.请您输入列表页面URL，以便更加准确地抓取数据。<br/>
+								2.对应列表页面，若存在翻页，请您输入起始页URL，以及要抓取的页数范围，方便我们统一抓取；若无翻页，则可不填。<br/>
+								例如：<br/>
+								URL：xxx.xxx.com<br/>
+								起始页：1  结束页：10<br/>
+								对应输入即可。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+		<script src="js/testExpand.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(function(){
+			var thisVal,thisText;
+			$(document).on('focus',".source input,.inputArea",function(){
+				thisVal=$(this).val();
+				thisText=$(this).text();
+				if(thisVal == this.defaultValue)
+				$(this).val("").text("")
+			}).on('blur',".source input,.inputArea",function(){
+				var a=$(this);
+				if(a.val()==''&&a.text()=='')
+				a.val(thisVal);
+				a.text(thisText);
+			})
+			$(document).on("click",".addCustomKey",function(){
+				addTextBox(this);
+			});
+			$(document).on("click",".delCustomKey",function(){
+				removeTextBox(this);
+			});	
+			$(function(){
+			    $('#source input').each(function () {
+		            if ($(this).attr('required') || $(this).attr('validType'))
+		                $(this).validatebox();
+			    })
+			 });
+            $('#source').form({
+				url:'',
+				onSubmit:function(){
+					return $(this).form('validate');
+				},
+				success:function(data){
+					//$.messager.alert('Info', data, 'info');
+				}
+			});
+		})
+		function addTextBox(e){
+	    	var self=$(e);
+	    	var items=$('.dsnUrls').length;
+			var textConcats='<li class="dsnUrls">'
+				+'<div><input value="数据源url" required="true" name="dsnUrl['+items+']" '
+				+'missingMessage="数据源url必须填写" class="easyui-validatebox inputText" validType="url" type="text" />'
+				+'<span lineTag="addContactWay">'
+				+	'<span class="delCustomKey" style="display:none;"></span>'
+				+	'<span class="addCustomKey" style="display: inline-block;"></span>'
+				+'</span>'
+				+'</div>'
+				+'<span class="ifPageUp">是否配置翻页:<input name="pageUp['+items+']" type="radio" />是'
+				+'<input type="radio" name="pageUp['+items+']" />否</span>'
+			+'</li>';
+			self.parents('li').after(textConcats);
+			ifAddCut(self);
+		}
+		function removeTextBox(obj){
+		    var self=$(obj);
+		    var dsnurl=$('.dsnUrls');
+		        $.each(dsnurl,function(i,o){
+		            $(o).find('div input').attr('name','dsnUrl['+i+']');
+		            $(o).find('.ifPageUp input').attr('name','dsnUrl['+i+']');
+		        });
+		    ifAddCut(self);
+		    self.parents('.dsnUrls').remove();
+		}
+		function ifAddCut(obj){
+		    var dsnUrls=$(obj).parents('.source');
+		    var addIcon=dsnUrls.find('.addCustomKey');
+		    var delIcon=dsnUrls.find('.delCustomKey');
+		    var telLen=$('.dsnUrls').length;
+		    var index=$(obj).parents('.dsnUrls').index();
+		    var btnType=$(obj).attr('class');
+		    
+		    if(btnType == "addCustomKey"){
+		    	if(telLen == 1){
+			        addIcon.css({display:"inline-block"});
+			        delIcon.css({display:"none"});
+			    }else if(telLen > 1){
+			        delIcon.css({display:"inline-block"});
+			        addIcon.css({display:"none"}).last().css({display:"inline-block"});
+			    }
+		    }else{
+		    	if(telLen == 2){
+			        addIcon.css({display:"inline-block"});
+			        delIcon.css({display:"none"});
+			    }else if(telLen > 2){
+			        delIcon.css({display:"inline-block"});
+			        if(index-1 == telLen){
+			            addIcon.css({display:"none"}).eq(-2).css({display:"inline-block"});
+			        }else{
+			            addIcon.css({display:"none"}).last().css({display:"inline-block"});
+			        }
+			        
+			    }
+		    }
+		}	
+
+
+
+		</script>
+	</body>
+</html>
