@@ -47,22 +47,22 @@
 							<form class="source" id="source">
 								<ul class="">
 									<li>
-										<input required="true" missingMessage="名称必须填写" value="自定义数据源名称" class="easyui-validatebox inputText" validType="username" type="text" />
+										<input required="true" name="sourceName" missingMessage="名称必须填写" value="自定义数据源名称" class="easyui-validatebox inputText" validType="username" type="text" />
 									</li>
 									<li>
-										<input required="true" value="网站来源"  validType="isNull" missingMessage="网站来源必须填写" class="easyui-validatebox inputText" type="text" />
+										<input name="from" required="true" value="网站来源" validType="isNull" missingMessage="网站来源必须填写" class="easyui-validatebox inputText" type="text" />
 									</li>
 									<li class="dsnUrls">
-										<div><input required="true" value="数据源url" missingMessage="数据源url必须填写" name="dsnUrl[0]" class="easyui-validatebox inputText" validType="url" type="text" />
+										<div><input name="url" required="true" value="数据源url" missingMessage="数据源url必须填写" name="dsnUrl[0]" class="easyui-validatebox inputText" validType="url" type="text" />
 										<span lineTag="addContactWay">
 											<span class="delCustomKey" style="display:none;"></span>
 											<span class="addCustomKey" style="display: inline-block;"></span>
 										</span>
 										</div>
-										<span class="ifPageUp">是否配置翻页:<input name="pageUp[0]" type="radio" />是<input type="radio" name="pageUp[0]" />否</span>
+										<span class="ifPageUp">是否配置翻页:<input name="paging[0]" type="radio" />是<input type="radio" name="paging[0]" />否</span>
 									</li>
 									<li>
-										<textarea  required="true"  validType="isNull"  missingMessage="备注必须填写" class="easyui-validatebox inputArea">数据源备注</textarea> 
+										<textarea  required="true" name="remark" validType="isNull"  missingMessage="备注必须填写" class="easyui-validatebox inputArea">数据源备注</textarea> 
 									</li>
 									<li>
 										<input class="save" value="保存" type="submit" /><span class="cancel">取消</span>
@@ -71,7 +71,15 @@
 							</form>
 						</div>
 						<div class="contentRight">
-							
+							<p>
+								提示：<br/>
+								1.请您输入列表页面URL，以便更加准确地抓取数据。<br/>
+								2.对应列表页面，若存在翻页，请您输入起始页URL，以及要抓取的页数范围，方便我们统一抓取；若无翻页，则可不填。<br/>
+								例如：<br/>
+								URL：xxx.xxx.com<br/>
+								起始页：1  结束页：10<br/>
+								对应输入即可。
+							</p>
 						</div>
 					</div>
 				</div>
@@ -117,11 +125,12 @@
 				}
 			});
 		})
-		 function addTextBox(e){
+		function addTextBox(e){
 	    	var self=$(e);
 	    	var items=$('.dsnUrls').length;
 			var textConcats='<li class="dsnUrls">'
-				+'<div><input value="数据源url" required="true" name="dsnUrl['+items+']" class="inputText" type="text" />'
+				+'<div><input value="数据源url" required="true" name="dsnUrl['+items+']" '
+				+'missingMessage="数据源url必须填写" class="easyui-validatebox inputText" validType="url" type="text" />'
 				+'<span lineTag="addContactWay">'
 				+	'<span class="delCustomKey" style="display:none;"></span>'
 				+	'<span class="addCustomKey" style="display: inline-block;"></span>'
